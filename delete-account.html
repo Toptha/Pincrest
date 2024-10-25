@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+        .container {
+            width: 400px;
+            padding: 40px;
+            background: #333;
+            box-shadow: 0 5px 45px maroon;
+            border-radius: 10px;
+        }
+        h2 {
+            color: red;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+        .warning-text {
+            color: red;
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            background-color: #2B2B2B;
+            border: 1px solid red;
+            border-radius: 50px;
+            color: red;
+            font-size: 16px;
+            outline: none;
+        }
+        .input-group input:focus {
+            background-color: #242424;
+            border-color: maroon;
+        }
+        .input-group label {
+            position: absolute;
+            left: 16px;
+            top: 45%;
+            transform: translateY(-50%);
+            font-size: 17px;
+            color: red;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -15%;
+            left: 15px;
+            font-size: 12px;
+            background-color: #333;
+            padding: 0 5px;
+            color: red;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: red;
+            color: black;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: maroon;
+            color: #ff0000;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            color: red;
+            text-decoration: none;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .back-link:hover {
+            color: maroon;
+        }
+        .confirm-checkbox {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: red;
+        }
+        .confirm-checkbox input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Account</h2>
+        <p class="warning-text">This action cannot be undone!</p>
+        <form action="http://localhost/delete-account.php" method="POST">
+            <div class="input-group">
+                <input type="email" name="email" required>
+                <label>Enter your email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" required>
+                <label>Enter your password</label>
+            </div>
+            <div class="confirm-checkbox">
+                <input type="checkbox" id="confirm" required>
+                <label for="confirm">I understand this action is permanent</label>
+            </div>
+            <button type="submit">Delete Account</button>
+        </form>
+        <a href="index.html" class="back-link">Cancel</a>
+    </div>
+</body>
+</html>
