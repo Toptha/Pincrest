@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Page</title>
+    <link rel="stylesheet" href="main-signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="blueBg">
+            <div class="box signin">
+                <i><h1 style="color: red;"><u>Welcome To </u></h1></i><br>
+                <i><h1 style="color: red;"><u>Pincrest </u></h1></i><br>
+                <h2>Already an Existing User?</h2>
+                <button class="signinBtn">Sign in</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't have an account?</h2>
+                <button class="signupBtn">Sign up</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="form signinForm">
+                <form id="signinForm" action="http://localhost/login.php" method="post">
+                    <i><h1 style="color: red; font-size: 28px;"><u>Welcome Back</u></h1></i><br>
+                   <u style="color: red;"> <br><h3>Sign In</h3><br></u>
+                    <div class="input-group">
+                        <input type="text" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="error" id="signinUsernameError"></div>
+                    <div class="input-group">
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="error" id="signinPasswordError"></div>
+                   <center><input type="submit" value="Login"></center>
+                  <center> <i> <a href="forgot-password.html" class="forgot">Forgot Password</a>
+                    <br>
+                    <br>
+                    <a href="index.html" class="forgot">Home</a></i></center>
+                </form>
+            </div>
+            <div class="form signupForm">
+                <form id="signupForm" action="http://localhost/sign.php" method="post">
+                    <h3>Sign Up</h3>
+                    <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                    </div>
+                    <div class="error" id="signupUsernameError"></div>
+                    <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                    </div>
+                    <div class="error" id="signupEmailError"></div>
+                    <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                    </div>
+                    <div class="error" id="signupPasswordError"></div>
+                    <div class="input-group">
+                    <input type="password" name="confirm_password" required>
+                    <label>Confirm Password</label>
+                    </div>
+                    <div class="error" id="signupConfirmPasswordError"></div>
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms" style="color: red;">I have read the <a href="tc.html" style="color: red;">Terms & Conditions</a></label>
+                    </div>
+                   <center><input type="submit" value="Register"></center>
+                   <center><a href="index.html" class="forgot">Home</a></i></center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="session-handler.js"></script>
+    <script src="main-signup.js"></script>
+</body>
+</html>

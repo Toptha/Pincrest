@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo"><img src="logo.jpg" alt="P"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." style="background-color: #333; color: red;">
+            </div>
+            <nav style="gap: 20px;">
+                <a href="http://localhost/domain.php">Create</a>
+                <a href="index.html">Explore</a>
+                <a href="genre.html">Genres</a>
+                <div class="dropdown">
+                    <a href="main-signup.html" class="login-btn">Login &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="delete-account.html">Delete Account</a>
+                        <a href="http://localhost/log.php" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="pin-container" id="pinContainer"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="Pin Image">
+            <h2 id="modal-title"></h2>
+        </div>
+    </div>
+    <div class="footer">
+        <center><a href="Aboutus.html" style="text-decoration: none;"><H1 style="color: red;">About  Us</H1></center></a><hr>
+        <h2 style="color: red;">Explore our socials:  </h2>
+        <div class="logo-title">
+            <div class="logo-title">
+           <a href="https://www.instagram.com/pinterest/?hl=en"><img src="Insta.jpg" alt="Instagram">
+           </div>
+            <div class="logo-title">
+                <a href="https://www.youtube.com/pinterest">
+                <img src="Youtube.jpg" alt="YouTube">
+            </div>
+            <div class="logo-title">
+                <a href="https://x.com/pinterest">
+                <img src="X.jpg" alt="X">
+            </div>
+            <div class="logo-title">
+                <a href="https://www.facebook.com/pinterest/">
+                <img src="facebook.jpg" alt="Facebook">
+            </div>
+        </div>
+    </div>
+    <script src="session-handler.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
